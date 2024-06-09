@@ -1,0 +1,15 @@
+1. Generate Classic Personal Access Token(PAT)
+
+Global Settings --> Developer Settings --> Token (Classic) --> Generate New Token
+
+https://github.com/settings/tokens
+
+
+#10.2 Connect to Git Repo
+# TOKEN =  ghp_YOUR_GITHUB_TOKEN_gh
+# https://oauth:TOKEN@github.com/NubeEra-DataEngineering/AzureDataBricks.git 
+
+
+
+
+https://oauth:TOKEN@github.com/NubeEra-DataEngineering/AzureDataBricks.git
