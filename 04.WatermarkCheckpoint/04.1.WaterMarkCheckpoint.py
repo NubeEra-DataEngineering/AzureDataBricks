@@ -20,6 +20,22 @@ input_path = "/databricks-datasets/structured-streaming/events/"
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC Structured Streaming uses watermarks to control the threshold for how long to continue processing updates for a given state entity.
+# MAGIC - Aggregations over a time windows
+# MAGIC - Unique keys in a join between two streams
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC # Why Checkpoint over watermark
+# MAGIC - Structured Streaming provides fault-tolerance and data consistency for streaming queries; using Azure Databricks workflows, 
+# MAGIC - you can easily configure your Structured Streaming queries to automatically restart on failure. 
+# MAGIC - By enabling checkpointing for a streaming query, you can restart the query after a failure.
+# MAGIC - The restarted query continues where the failed one left off.
+
+# COMMAND ----------
+
 # Read the input data stream
 input_stream = spark.readStream \
     .schema(schema) \
