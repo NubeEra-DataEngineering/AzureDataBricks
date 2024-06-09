@@ -114,6 +114,9 @@ SELECT * FROM lineage_data.lineagedemo.menu
 -- COMMAND ----------
 
 GRANT USE SCHEMA on lineage_data.lineagedemo to `sam@company.com`;
+
+-- COMMAND ----------
+
 GRANT SELECT on lineage_data.lineagedemo.menu
  to `francis@company.com`;
 
