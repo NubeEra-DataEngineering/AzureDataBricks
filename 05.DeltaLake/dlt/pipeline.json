@@ -1,0 +1,23 @@
+{
+  "name": "delta-dlt-demo-pipeline",
+  "edition": "Advanced",
+  "development": true,
+  "storage": "dbfs:/tmp/dlt/delta_dlt_demo",
+  "configuration": {
+    "spark.sql.shuffle.partitions": "64"
+  },
+  "clusters": [
+    {
+      "label": "default",
+      "num_workers": 2
+    }
+  ],
+  "libraries": [
+    {
+      "notebook": {
+        "path": "/Workspace/Users/<you>/dlt/dlt_pipeline"
+      }
+    }
+  ],
+  "target": "delta_dlt_demo_db"
+}
