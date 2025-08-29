@@ -1,0 +1,57 @@
+{
+  "name": "my_pipeline",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "run_n1",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/mujahed.trainer@gmail.com/Workspace/n1",
+        "base_parameters": {
+          "name": "Hasnain",
+          "age": "12"
+        },
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {}
+    },
+    {
+      "task_key": "run_n2",
+      "depends_on": [
+        {
+          "task_key": "run_n1"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/mujahed.trainer@gmail.com/Workspace/n2",
+        "base_parameters": {
+          "message": "{{run_n1.output}}"
+        },
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {}
+    }
+  ],
+  "git_source": {
+    "git_url": "https://github.com/NubeEra-DataEngineering/AzureDataBricks.git",
+    "git_provider": "gitHub",
+    "git_branch": "master"
+  },
+  "queue": {
+    "enabled": true
+  },
+  "performance_target": "STANDARD",
+  "run_as": {
+    "user_name": "mujahed.trainer@gmail.com"
+  }
+}
