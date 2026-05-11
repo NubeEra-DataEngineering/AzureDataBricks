@@ -1,0 +1,27 @@
+[
+  {
+    "log_id": 1,
+    "timestamp": "2023-08-02 10:30:45",
+    "customer_id": "CUST123",
+    "product_id": "PROD001",
+    "action": "view",
+    "quantity": null
+  },
+  {
+    "log_id": 2,
+    "timestamp": "2023-08-02 10:35:21",
+    "customer_id": "CUST456",
+    "product_id": "PROD002",
+    "action": "add_to_cart",
+    "quantity": 2
+  },
+  {
+    "log_id": 3,
+    "timestamp": "2023-08-02 10:45:12",
+    "customer_id": "CUST789",
+    "product_id": "PROD001",
+    "action": "purchase",
+    "quantity": 5
+  },
+  // Add more log entries here...
+]
